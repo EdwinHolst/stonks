@@ -1,0 +1,41 @@
+{
+  "currency": "CAD",
+  "fx": 1.37,
+  "net_debt": -4360663,
+  "current_price": 1.06,
+  "discount_rate": 0.10,
+  "opex_per_tonne_usd": 7000,
+  "_comment": "Year-by-year ramp grounded in the announced 3-stage roadmap (each facility ~1,000 tpa; Stage 1 Dec 2026, Stage 2 Jun 2027, Stage 3 H2 2027+). Battery-grade Li2CO3 prices (USD/t) re-anchored Jun 2026: current China spot ~$24-25k (off ~$28k May peak); Bernstein fcst $20k(2026)/$25k(2027). bear=downcycle/incentive 15k, base=mid-cycle 20k, bull=tight-market 25k. Converted via fx. discount_rate 0.10 assumes execution risk is captured via scenario probabilities (not double-counted in the rate). exit_ev_ebitda raised (8/12/15) to reflect that companies are still growing at exit + 220k blue-sky runway. opex_per_tonne_usd 7000 is based on the company's disclosed ~US$6.2k/t operating cost (press release, ~Jun 2026), rounded up; may exclude corporate SG&A/sustaining capex. capex (build cost) is still an ILLUSTRATIVE placeholder - NOT from filings. EBITDA = (price - opex) * tonnes, so margin rises with price. See assumptions.md and the Limitations section. net_debt = totalDebt 2,791,965 - totalCash 7,152,628.",
+  "scenarios": [
+    {
+      "name": "bear", "prob": 0.40,
+      "price_per_tonne_usd": 15000,
+      "exit_ev_ebitda": 8, "shares_at_exit": 280000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 4000000},
+        {"year": 2, "production_tonnes": 2000, "capex": 4000000}
+      ]
+    },
+    {
+      "name": "base", "prob": 0.40,
+      "price_per_tonne_usd": 20000,
+      "exit_ev_ebitda": 12, "shares_at_exit": 340000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 4000000},
+        {"year": 2, "production_tonnes": 2000, "capex": 4000000},
+        {"year": 3, "production_tonnes": 4000, "capex": 8000000}
+      ]
+    },
+    {
+      "name": "bull", "prob": 0.20,
+      "price_per_tonne_usd": 25000,
+      "exit_ev_ebitda": 15, "shares_at_exit": 420000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 5000000},
+        {"year": 2, "production_tonnes": 3000, "capex": 8000000},
+        {"year": 3, "production_tonnes": 6000, "capex": 10000000},
+        {"year": 4, "production_tonnes": 10000, "capex": 12000000}
+      ]
+    }
+  ]
+}

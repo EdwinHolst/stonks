@@ -1,0 +1,9 @@
+{
+  "currency": "CAD",
+  "shares_outstanding": 100000000,
+  "net_debt": 0,
+  "discount_rate": 0.11,
+  "terminal_growth": 0.025,
+  "fcf": [10.0, 12.0, 14.0, 16.0, 18.0],
+  "_comment": "fcf is projected free cash flow per year in MILLIONS of currency; net_debt = total_debt - total_cash in absolute units (negative = net cash). Use for revenue/FCF-positive companies."
+}
