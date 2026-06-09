@@ -1,4 +1,4 @@
 # Stonks
 
 ## Goals
-Gets rich or dye my hair blue while trying.
+Gets rich or dye my hair blue while trying. Hej!
