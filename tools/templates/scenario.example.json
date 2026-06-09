@@ -1,0 +1,41 @@
+{
+  "currency": "CAD",
+  "fx": 1.37,
+  "net_debt": 0,
+  "current_price": 1.0,
+  "discount_rate": 0.18,
+  "opex_per_tonne_usd": 7000,
+  "_comment": "Early-stage model with a year-by-year production ramp. Per ramp year: revenue=production*price (price_per_tonne_usd*fx, or price_per_tonne); EBITDA=(price-opex)*tonnes using opex_per_tonne[_usd] (config/scenario/year level; PREFERRED) OR revenue*ebitda_margin if no opex given; fcf=ebitda-capex, discounted; terminal EV=final-year ebitda*exit_ev_ebitda (or revenue*exit_ev_revenue) discounted; equity=sum(pv)+pv_terminal-net_debt; per_share=equity/shares_at_exit. probs sum to 1. Run with --detail for the yearly table.",
+  "scenarios": [
+    {
+      "name": "bear", "prob": 0.4,
+      "price_per_tonne_usd": 15000,
+      "exit_ev_ebitda": 6, "shares_at_exit": 280000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 4000000},
+        {"year": 2, "production_tonnes": 2000, "capex": 4000000}
+      ]
+    },
+    {
+      "name": "base", "prob": 0.4,
+      "price_per_tonne_usd": 20000,
+      "exit_ev_ebitda": 8, "shares_at_exit": 340000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 4000000},
+        {"year": 2, "production_tonnes": 2000, "capex": 4000000},
+        {"year": 3, "production_tonnes": 4000, "capex": 8000000}
+      ]
+    },
+    {
+      "name": "bull", "prob": 0.2,
+      "price_per_tonne_usd": 25000,
+      "exit_ev_ebitda": 9, "shares_at_exit": 420000000,
+      "ramp": [
+        {"year": 1, "production_tonnes": 1000, "capex": 5000000},
+        {"year": 2, "production_tonnes": 3000, "capex": 8000000},
+        {"year": 3, "production_tonnes": 6000, "capex": 10000000},
+        {"year": 4, "production_tonnes": 10000, "capex": 12000000}
+      ]
+    }
+  ]
+}
