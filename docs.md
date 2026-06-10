@@ -88,3 +88,5 @@ Decisions will be appended below as they are made.
   - **Merlin Inc** — NASDAQ: MRLN (folder `companies/merlin/`)
   - **LibertyStream Infrastructure Partners Inc** — CVE (TSX Venture): LIB
     (folder `companies/liberty-stream/`)
+  - **Sustainion Group AB** — Spotlight Stock Market (XSAT): SUSG / SUSG.ST
+    (folder `companies/sustainion/`)
